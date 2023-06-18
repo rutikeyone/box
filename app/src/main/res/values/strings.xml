@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Box</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="field_email">Email</string>
+    <string name="field_password">Password</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_create_account">Create Account</string>
+    <string name="field_username">Username</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="empty_text_field">Empty text field</string>
+    <string name="incorrect_email">Incorrect email</string>
+    <string name="the_password_must_contain_more_than_eight_characters">The password must contain more than eight characters.</string>
+    <string name="invalid_user_name">Invalid user name</string>
+    <string name="passwords_must_match">Passwords must match</string>
+</resources>

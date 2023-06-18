@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_blue_v1">#6789ab</color>
+    <color name="blue_v1">#0000ff</color>
+    <color name="white">#ffffff</color>
+    <color name="indeterminateTint.V1">@color/white</color>
+</resources>

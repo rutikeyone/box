@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Box</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_wait">Пожалуйста подождите...</string>
+    <string name="field_email">Почта</string>
+    <string name="field_password">Пароль</string>
+    <string name="action_sign_in">Войти</string>
+    <string name="action_create_account">Создать аккаунт</string>
+    <string name="field_username">Имя</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="empty_text_field">Пустое текстовое поле</string>
+    <string name="incorrect_email">Некорректная почта</string>
+    <string name="the_password_must_contain_more_than_eight_characters">Пароль должен содержать больше восьми символов</string>
+    <string name="invalid_user_name">Некорректное имя пользователя</string>
+    <string name="passwords_must_match">Пароли должны совпадать</string>
+</resources>

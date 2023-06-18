@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.V21.Theme.Box" parent="Theme.Material3.DayNight.NoActionBar"/>
+    <style name="Base.Theme.Box" parent="Base.V21.Theme.Box" />
+
+    <style name="Theme.Box" parent="Base.Theme.Box">
+        <item name="android:indeterminateTint">@color/white</item>
+    </style>
+
+    <style name="Box.TextAppearance.Body1.V1" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="Box.TextAppearance.Body1.Bold" parent="Box.TextAppearance.Body1.V1">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Box.Button.V1" parent="Widget.Material3.Button"></style>
+
+    <style name="Box.OutlinedButton.V1" parent="Widget.Material3.Button.OutlinedButton"></style>
+
+</resources>
