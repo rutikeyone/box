@@ -46,7 +46,7 @@ class SignInViewModel @Inject constructor(
     }
 
     fun navigateToSignUp() {
-        val navigationIntent = NavigationIntent(SignInFragmentDirections.actionSignInFragmentToSignUpFragment2())
+        val navigationIntent = NavigationIntent.To(SignInFragmentDirections.actionSignInFragmentToSignUpFragment2())
         navigationEvent.publishEvent(navigationIntent)
     }
 

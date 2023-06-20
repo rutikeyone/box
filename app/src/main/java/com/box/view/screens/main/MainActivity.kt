@@ -12,8 +12,8 @@ import androidx.navigation.fragment.findNavController
 import com.box.R
 import com.box.databinding.ActivityMainBinding
 import com.box.view.screens.auth.SignInFragmentDirections
-import com.box.view.screens.home.HomeFragmentDirections
 import com.box.view.screens.splash.SplashFragmentDirections
+import com.box.view.screens.tabs.TabsFragmentDirections
 import com.box.view.viewmodel.main.MainViewModel
 import com.box.view.viewmodel.main.MainViewState
 import dagger.hilt.android.AndroidEntryPoint
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
     private fun navigateByNotAuthenticatedState() {
         when(rootNavController.currentDestination?.id) {
             R.id.splashFragment -> rootNavController.navigate(SplashFragmentDirections.actionSplashFragmentToAuthGraph())
-            R.id.homeFragment -> rootNavController.navigate(HomeFragmentDirections.actionGlobalAuthGraph())
+            R.id.homeFragment -> rootNavController.navigate(TabsFragmentDirections.actionGlobalAuthGraph())
         }
     }
 

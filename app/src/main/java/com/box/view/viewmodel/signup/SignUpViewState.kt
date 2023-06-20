@@ -10,6 +10,11 @@ data class SignUpViewState(
     val username: UsernameField = UsernameField(),
     val password: PasswordField = PasswordField(),
     val confirmedPassword: ConfirmedPassword = ConfirmedPassword(),
+    val signUpInProgress: Boolean = false,
 ) {
-    val isCanSignUp = email.isValid && password.isValid && username.isValid && confirmedPassword.isValid
+    val isCanSignUp = email.isValid
+            && password.isValid
+            && username.isValid
+            && confirmedPassword.isValid
+            && !signUpInProgress
 }

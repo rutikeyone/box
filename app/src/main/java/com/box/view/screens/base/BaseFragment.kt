@@ -39,7 +39,12 @@ open class BaseFragment(@LayoutRes contentLayoutId: Int): Fragment(contentLayout
 
     private fun createToast(toastIntent: ToastIntent) = Toast.makeText(requireContext(), toastIntent.message, toastIntent.duration).show()
 
-    private fun executeNavigationEvent(navigationIntent: NavigationIntent) = findNavController().navigate(navigationIntent.direction)
+    private fun executeNavigationEvent(navigationIntent: NavigationIntent) {
+        when (navigationIntent) {
+            is NavigationIntent.To -> findNavController().navigate(navigationIntent.direction)
+            NavigationIntent.Pop -> findNavController().popBackStack()
+        }
+    }
 
     private fun createDialog(dialogIntent: DialogIntent) {
         AlertDialog.Builder(requireContext())

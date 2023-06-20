@@ -33,9 +33,9 @@
         app:startDestination="@id/homeFragment">
         <fragment
             android:id="@+id/homeFragment"
-            android:name="com.box.view.screens.home.HomeFragment"
+            android:name="com.box.view.screens.tabs.TabsFragment"
             android:label="fragment_home"
-            tools:layout="@layout/fragment_home" />
+            tools:layout="@layout/tabs_fragment" />
         <action
             android:id="@+id/action_global_auth_graph"
             app:destination="@id/auth_graph"

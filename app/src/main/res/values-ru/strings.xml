@@ -16,4 +16,8 @@
     <string name="passwords_must_match">Пароли должны совпадать</string>
     <string name="invalid_email_or_password_message">Неверный адрес электронной почты или пароль.</string>
     <string name="an_error_occurred_while_performing_the_operation_try_again_later_message">При выполнении операции произошла ошибка. Повторите попытку позже.</string>
+    <string name="such_a_user_already_exists_message">Такой пользователь уже существует.</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
 </resources>

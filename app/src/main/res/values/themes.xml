@@ -1,9 +1,9 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.V21.Theme.Box" parent="Theme.Material3.DayNight.NoActionBar"/>
+    <style name="Base.V21.Theme.Box" parent="Theme.Material3.DayNight"/>
     <style name="Base.Theme.Box" parent="Base.V21.Theme.Box" />
 
-    <style name="Theme.Box" parent="Base.Theme.Box"></style>
+    <style name="Theme.Box" parent="Base.Theme.Box" />
     
     <style name="Box.TextAppearance.Body1.V1" parent="TextAppearance.AppCompat.Body1">
         <item name="android:textSize">18sp</item>
@@ -15,8 +15,8 @@
     </style>
 
 
-    <style name="Box.Button.V1" parent="Widget.Material3.Button"></style>
+    <style name="Box.Button.V1" parent="Widget.Material3.Button" />
 
-    <style name="Box.OutlinedButton.V1" parent="Widget.Material3.Button.OutlinedButton"></style>
+    <style name="Box.OutlinedButton.V1" parent="Widget.Material3.Button.OutlinedButton" />
 
 </resources>

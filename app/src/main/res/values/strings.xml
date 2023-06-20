@@ -15,4 +15,8 @@
     <string name="passwords_must_match">Passwords must match</string>
     <string name="invalid_email_or_password_message">Invalid email or password.</string>
     <string name="an_error_occurred_while_performing_the_operation_try_again_later_message">An error occurred while performing the operation. Try again later.</string>
+    <string name="such_a_user_already_exists_message">Such a user already exists.</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
 </resources>

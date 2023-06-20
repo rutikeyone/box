@@ -1,5 +1,6 @@
 package com.box.view.screens.auth
 
+import android.opengl.Visibility
 import android.os.Bundle
 import android.text.Editable
 import android.view.View
@@ -9,20 +10,27 @@ import androidx.fragment.app.viewModels
 import com.box.R
 import com.box.databinding.FragmentSignUpBinding
 import com.box.view.screens.base.BaseFragment
+import com.box.view.utils.hideKeyboard
 import com.box.view.utils.validateConfirmedPassword
 import com.box.view.utils.validateEmail
 import com.box.view.utils.validatePassword
 import com.box.view.utils.validateUsername
 import com.box.view.viewmodel.signup.SignUpViewModel
 import com.box.view.viewmodel.signup.SignUpViewState
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
 
 
+@AndroidEntryPoint
 class SignUpFragment : BaseFragment(R.layout.fragment_sign_up) {
     override val viewModel by viewModels<SignUpViewModel>()
 
     private lateinit var binding: FragmentSignUpBinding
 
-    private val createAccountOnPressedListener = OnClickListener { viewModel.createAccount() }
+    private val createAccountOnPressedListener = OnClickListener {
+        hideKeyboard()
+        viewModel.createAccount()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -39,6 +47,7 @@ class SignUpFragment : BaseFragment(R.layout.fragment_sign_up) {
         binding.usernameEditText.error = validateUsername(state.username)
         binding.repeatPasswordEditText.error = validateConfirmedPassword(state.confirmedPassword)
         binding.createAccountButton.isEnabled = state.isCanSignUp
+        binding.progressBar.visibility = if(state.signUpInProgress) View.VISIBLE else View.GONE
     }
 
     private fun setupUI() {

@@ -20,10 +20,10 @@ data class PermissionIntent(
     val notAccess: () -> Unit,
     val notAccessForever: () -> Unit,
 )
-
-data class NavigationIntent(
-    val direction: NavDirections,
-)
+sealed class NavigationIntent {
+    data class To(val direction: NavDirections): NavigationIntent()
+    object Pop : NavigationIntent()
+}
 
 data class ToastIntent(
     @StringRes val message: Int,
