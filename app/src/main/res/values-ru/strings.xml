@@ -14,4 +14,6 @@
     <string name="the_password_must_contain_more_than_eight_characters">Пароль должен содержать больше восьми символов</string>
     <string name="invalid_user_name">Некорректное имя пользователя</string>
     <string name="passwords_must_match">Пароли должны совпадать</string>
+    <string name="invalid_email_or_password_message">Неверный адрес электронной почты или пароль.</string>
+    <string name="an_error_occurred_while_performing_the_operation_try_again_later_message">При выполнении операции произошла ошибка. Повторите попытку позже.</string>
 </resources>

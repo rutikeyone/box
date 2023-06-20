@@ -7,22 +7,25 @@ import com.box.view.utils.MutableLiveEvent
 import com.box.view.utils.NavigationIntent
 import com.box.view.utils.PermissionIntent
 import com.box.view.utils.SnackBarIntent
+import com.box.view.utils.ToastIntent
 import com.box.view.utils.share
 
 open class BaseViewModel: ViewModel() {
-    private val _permissionCallbackWrapper = CallBackWrapper<Boolean>()
-    val permissionCallBackWrapper
-        get() = _permissionCallbackWrapper
+    private val permissionCallbackWrapper = CallBackWrapper<Boolean>()
+    val permissionCallBackWrapperShare = permissionCallbackWrapper
 
     private val _showSnackBarEvent = MutableLiveEvent<SnackBarIntent>()
-    val showSnackBarEvent = _showSnackBarEvent.share()
+    val showSnackBarShareEvent = _showSnackBarEvent.share()
 
     private val _showPermissionEvent = MutableLiveEvent<PermissionIntent>()
-    val showPermissionEvent = _showPermissionEvent.share()
+    val showPermissionShareEvent = _showPermissionEvent.share()
 
     private val _showDialogEvent = MutableLiveEvent<DialogIntent>()
-    val showDialogEvent = _showDialogEvent.share()
+    val showDialogShareEvent = _showDialogEvent.share()
 
-    protected val _navigationEvent = MutableLiveEvent<NavigationIntent>()
-    val navigationEvent = _navigationEvent.share()
+    protected val navigationEvent = MutableLiveEvent<NavigationIntent>()
+    val navigationShareEvent = navigationEvent.share()
+
+    protected val toastEvent = MutableLiveEvent<ToastIntent>()
+    val toastsShareEvent = toastEvent.share()
 }

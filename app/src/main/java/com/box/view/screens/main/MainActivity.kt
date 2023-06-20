@@ -16,7 +16,9 @@ import com.box.view.screens.home.HomeFragmentDirections
 import com.box.view.screens.splash.SplashFragmentDirections
 import com.box.view.viewmodel.main.MainViewModel
 import com.box.view.viewmodel.main.MainViewState
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 

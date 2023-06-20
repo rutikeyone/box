@@ -1,6 +1,7 @@
 package com.box.view.screens.base
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.LayoutRes
@@ -12,6 +13,7 @@ import com.box.view.utils.DialogIntent
 import com.box.view.utils.NavigationIntent
 import com.box.view.utils.PermissionIntent
 import com.box.view.utils.SnackBarIntent
+import com.box.view.utils.ToastIntent
 import com.box.view.utils.observeEvent
 import com.google.android.material.snackbar.Snackbar
 
@@ -20,7 +22,7 @@ open class BaseFragment(@LayoutRes contentLayoutId: Int): Fragment(contentLayout
     private val requestPermissionListener : ActivityResultLauncher<String> by lazy(LazyThreadSafetyMode.SYNCHRONIZED, ::createRequestPermission)
 
     private fun createRequestPermission(): ActivityResultLauncher<String>
-        = registerForActivityResult(ActivityResultContracts.RequestPermission(), viewModel.permissionCallBackWrapper)
+        = registerForActivityResult(ActivityResultContracts.RequestPermission(), viewModel.permissionCallBackWrapperShare)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         observeSideEffectIntents()
@@ -28,11 +30,14 @@ open class BaseFragment(@LayoutRes contentLayoutId: Int): Fragment(contentLayout
     }
 
     private fun observeSideEffectIntents() {
-        viewModel.showSnackBarEvent.observeEvent(this, ::createShowSnackBar)
-        viewModel.showPermissionEvent.observeEvent(this, ::createPermission)
-        viewModel.showDialogEvent.observeEvent(this, ::createDialog)
-        viewModel.navigationEvent.observeEvent(this, ::executeNavigationEvent)
+        viewModel.showSnackBarShareEvent.observeEvent(this, ::createShowSnackBar)
+        viewModel.showPermissionShareEvent.observeEvent(this, ::createPermission)
+        viewModel.showDialogShareEvent.observeEvent(this, ::createDialog)
+        viewModel.navigationShareEvent.observeEvent(this, ::executeNavigationEvent)
+        viewModel.toastsShareEvent.observeEvent(this, ::createToast)
     }
+
+    private fun createToast(toastIntent: ToastIntent) = Toast.makeText(requireContext(), toastIntent.message, toastIntent.duration).show()
 
     private fun executeNavigationEvent(navigationIntent: NavigationIntent) = findNavController().navigate(navigationIntent.direction)
 

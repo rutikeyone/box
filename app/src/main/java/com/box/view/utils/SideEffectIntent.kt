@@ -1,5 +1,6 @@
 package com.box.view.utils
 
+import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.navigation.NavDirections
 
@@ -22,4 +23,9 @@ data class PermissionIntent(
 
 data class NavigationIntent(
     val direction: NavDirections,
+)
+
+data class ToastIntent(
+    @StringRes val message: Int,
+    val duration: Int = Toast.LENGTH_LONG,
 )

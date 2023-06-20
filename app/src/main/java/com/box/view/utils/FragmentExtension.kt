@@ -1,5 +1,9 @@
 package com.box.view.utils
 
+import android.content.Context
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import androidx.fragment.app.Fragment
 import com.box.R
 import com.box.domain.entity.field.ConfirmedPassword
 import com.box.domain.entity.field.ConfirmedPasswordFieldValidationStatus
@@ -31,4 +35,8 @@ fun BaseFragment.validateUsername(value: UsernameField): String? = when(value.st
 fun BaseFragment.validateConfirmedPassword(value: ConfirmedPassword): String? = when(value.status) {
     ConfirmedPasswordFieldValidationStatus.NOT_EQUAL_PASSWORD -> getString(R.string.passwords_must_match)
     else -> null
+}
+fun Fragment.hideKeyboard() {
+    val inputMethodService = view?.context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    inputMethodService.hideSoftInputFromWindow(requireView().windowToken, 0)
 }

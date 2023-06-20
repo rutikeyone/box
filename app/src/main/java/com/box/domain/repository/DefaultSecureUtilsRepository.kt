@@ -5,8 +5,9 @@ import com.box.data.repository.SecureUtilsRepository
 import java.security.SecureRandom
 import javax.crypto.SecretKeyFactory
 import javax.crypto.spec.PBEKeySpec
+import javax.inject.Inject
 
-class DefaultSecureUtilsRepository: SecureUtilsRepository {
+class DefaultSecureUtilsRepository @Inject constructor(): SecureUtilsRepository {
     private val secureRandom = SecureRandom()
 
     override fun generateSalt(): ByteArray {
