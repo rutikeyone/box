@@ -45,8 +45,12 @@ class SignInFragment : BaseFragment(R.layout.fragment_sign_in) {
     private fun changeUIWhenStateChanged(state: SignInViewState) {
         binding.emailEditText.error = validateEmail(state.email)
         binding.passwordEditText.error = validatePassword(state.password)
-        binding.signInButton.isEnabled = state.isCanSignIn
         binding.progressBar.visibility = if(state.signInInProgress) View.VISIBLE else View.GONE
+
+        binding.signInButton.isEnabled = state.isCanSignIn
+        binding.emailTextInput.isEnabled = state.enableView
+        binding.passwordTextInput.isEnabled = state.enableView
+        binding.signUpButton.isEnabled = state.enableView
     }
 
     private fun setupUI() {

@@ -46,8 +46,13 @@ class SignUpFragment : BaseFragment(R.layout.fragment_sign_up) {
         binding.passwordEditText.error = validatePassword(state.password)
         binding.usernameEditText.error = validateUsername(state.username)
         binding.repeatPasswordEditText.error = validateConfirmedPassword(state.confirmedPassword)
-        binding.createAccountButton.isEnabled = state.isCanSignUp
         binding.progressBar.visibility = if(state.signUpInProgress) View.VISIBLE else View.GONE
+
+        binding.createAccountButton.isEnabled = state.isCanSignUp
+        binding.emailEditText.isEnabled = state.enableView
+        binding.usernameEditText.isEnabled = state.enableView
+        binding.passwordEditText.isEnabled = state.enableView
+        binding.repeatPasswordEditText.isEnabled = state.enableView
     }
 
     private fun setupUI() {

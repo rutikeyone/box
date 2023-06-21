@@ -8,6 +8,6 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.box.view.screens.tabs.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="@string/profile_screen"
         tools:layout="@layout/fragment_profile" />
 </navigation>

@@ -8,6 +8,6 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.box.view.screens.tabs.SettingsFragment"
-        android:label="fragment_settings"
+        android:label="@string/settings_screen"
         tools:layout="@layout/fragment_settings" />
 </navigation>

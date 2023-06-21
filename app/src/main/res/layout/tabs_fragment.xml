@@ -6,6 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.screens.tabs.TabsFragment">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tabsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/tabsContainer"
         android:layout_width="0dp"
@@ -14,8 +22,8 @@
         app:navGraph="@navigation/tabs_graph"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"/>
+        app:layout_constraintTop_toBottomOf="@id/tabsToolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

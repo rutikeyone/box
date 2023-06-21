@@ -1,6 +1,6 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.V21.Theme.Box" parent="Theme.Material3.DayNight"/>
+    <style name="Base.V21.Theme.Box" parent="Theme.Material3.DayNight.NoActionBar"/>
     <style name="Base.Theme.Box" parent="Base.V21.Theme.Box" />
 
     <style name="Theme.Box" parent="Base.Theme.Box" />

@@ -9,4 +9,5 @@ data class SignInViewState(
     val signInInProgress: Boolean = false,
 ) {
     val isCanSignIn = email.isValid && password.isValid && !signInInProgress
+    val enableView = !signInInProgress
 }

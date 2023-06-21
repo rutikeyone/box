@@ -2,6 +2,8 @@ package com.box.view.screens.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
@@ -13,7 +15,9 @@ import com.box.R
 import com.box.databinding.ActivityMainBinding
 import com.box.view.screens.auth.SignInFragmentDirections
 import com.box.view.screens.splash.SplashFragmentDirections
+import com.box.view.screens.tabs.TabsFragment
 import com.box.view.screens.tabs.TabsFragmentDirections
+import com.box.view.utils.HasScreenToolbar
 import com.box.view.viewmodel.main.MainViewModel
 import com.box.view.viewmodel.main.MainViewState
 import dagger.hilt.android.AndroidEntryPoint
@@ -26,7 +30,6 @@ class MainActivity : AppCompatActivity() {
 
     private val rootNavController
         get() = ((supportFragmentManager.findFragmentById(R.id.fragmentContainer)) as NavHostFragment).navController
-
     private var currentNavController: NavController? = null
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
@@ -44,7 +47,6 @@ class MainActivity : AppCompatActivity() {
             onNavControllerActivated(fragment.findNavController())
         }
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -62,7 +64,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setStartDestination() {
-         val graph = rootNavController.navInflater.inflate(getMainNavigationGraphId())
+        val graph = rootNavController.navInflater.inflate(getMainNavigationGraphId())
         graph.setStartDestination(getSplashDestination())
         rootNavController.graph = graph
         currentNavController = rootNavController

@@ -17,4 +17,6 @@ data class SignUpViewState(
             && username.isValid
             && confirmedPassword.isValid
             && !signUpInProgress
+
+    val enableView = !signUpInProgress
 }
