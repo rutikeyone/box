@@ -74,7 +74,6 @@ class RoomAccountsRepository @Inject constructor(
         delay(1000)
         val accountId = appSettingsRepository.getCurrentAccountId()
         if(accountId == AppSettingsRepository.NO_ACCOUNT_ID) throw AuthException()
-
         updateUsernameForAccountId(accountId, newUsername)
         currentAccountIdFlow.get().value = AccountId(accountId)
         return@wrapSQLiteException
