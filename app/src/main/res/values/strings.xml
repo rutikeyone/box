@@ -26,5 +26,8 @@
     <string name="action_edit_profile">Edit Profile</string>
     <string name="logout">Logout</string>
     <string name="edit_profile_screen">Edit profile</string>
-    <string name="created_at">Created At</string>
+    <string name="field_created_at">Created At</string>
+    <string name="right_now_you_can_edit_only_username">Right now you can edit only username</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
 </resources>

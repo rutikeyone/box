@@ -21,6 +21,10 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="Box.TextAppearance.Profile.Body1" parent="Box.TextAppearance.Body1.Bold">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     <style name="Box.TextAppearance.Hint1" parent="TextAppearance.AppCompat.Small">/
         <item name="android:textSize">16sp</item>
     </style>

@@ -12,16 +12,123 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/editProfileButton"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dataContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_16"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/emailHintTextView"
+                style="@style/Box.TextAppearance.Hint1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/field_email"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/usernameHintTextView"
+                style="@style/Box.TextAppearance.Hint1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/field_username"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailHintTextView" />
+
+            <TextView
+                android:id="@+id/createdAtHintTextView"
+                style="@style/Box.TextAppearance.Hint1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/field_created_at"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/usernameHintTextView" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/startBarrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="emailHintTextView,usernameHintTextView,createdAtHintTextView"/>
+
+            <TextView
+                android:id="@+id/emailTextView"
+                style="@style/Box.TextAppearance.Profile.Body1"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="test@test.test"
+                app:layout_constraintStart_toStartOf="@id/startBarrier"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintTop_toTopOf="@id/emailHintTextView"
+                app:layout_constraintBottom_toBottomOf="@id/emailHintTextView" />
+
+            <TextView
+                android:id="@+id/usernameTextView"
+                style="@style/Box.TextAppearance.Profile.Body1"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                tools:text="admin"
+                app:layout_constraintStart_toStartOf="@id/startBarrier"
+                app:layout_constraintTop_toTopOf="@id/usernameHintTextView"
+                app:layout_constraintBottom_toBottomOf="@id/usernameHintTextView"/>
+
+            <TextView
+                android:id="@+id/createdAtTextView"
+                style="@style/Box.TextAppearance.Profile.Body1"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="10/10/2010"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="@id/startBarrier"
+                app:layout_constraintTop_toTopOf="@id/createdAtHintTextView"
+                app:layout_constraintBottom_toBottomOf="@id/createdAtHintTextView"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/emailContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="emailHintTextView, emailTextView"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/usernameContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="usernameHintTextView, usernameTextView"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/createdAtContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="createdAtHintTextView, createdAtTextView"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <Button
+            android:id="@+id/editProfileButton"
+            android:minWidth="@dimen/dp_260"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dataContainer"
             android:text="@string/action_edit_profile"
-            style="@style/Box.Button.V1"/>
+            style="@style/Box.Button.V1"
+            android:layout_marginTop="@dimen/dp_8"/>
 
         <Button
             android:id="@+id/logoutProfileButton"

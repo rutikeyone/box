@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/editFragment"
-        android:name="com.box.view.screens.profile.EditFragment"
+        android:name="com.box.view.screens.profile.EditProfileFragment"
         android:label="@string/edit_profile_screen"
-        tools:layout="@layout/fragment_edit" />
+        tools:layout="@layout/fragment_edit_profile" />
 </navigation>

@@ -27,5 +27,8 @@
     <string name="action_edit_profile">Редактировать профиль</string>
     <string name="logout">Выйти</string>
     <string name="edit_profile_screen">Редактировать</string>
-    <string name="created_at">Создано</string>
+    <string name="field_created_at">Создано</string>
+    <string name="right_now_you_can_edit_only_username">Сейчас вы можете редактировать только имя пользователя</string>
+    <string name="action_save">Сохранить</string>
+    <string name="action_cancel">Отменить</string>
 </resources>
