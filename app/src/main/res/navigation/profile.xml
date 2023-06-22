@@ -7,7 +7,20 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.box.view.screens.tabs.ProfileFragment"
+        android:name="com.box.view.screens.profile.ProfileFragment"
         android:label="@string/profile_screen"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editFragment"
+            app:destination="@id/editFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.box.view.screens.profile.EditFragment"
+        android:label="@string/edit_profile_screen"
+        tools:layout="@layout/fragment_edit" />
 </navigation>

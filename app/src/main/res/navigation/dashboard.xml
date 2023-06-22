@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.box.view.screens.tabs.DashboardFragment"
+        android:name="com.box.view.screens.dashboard.DashboardFragment"
         android:label="@string/dashboard_screen"
         tools:layout="@layout/fragment_dashboard" />
 

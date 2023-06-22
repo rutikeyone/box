@@ -23,4 +23,9 @@
     <string name="dashboard_screen">Панель</string>
     <string name="settings_screen">Настройки</string>
     <string name="profile_screen">Профиль</string>
+    <string name="let_s_imagine_this_is_a_user_profile_screen">Давайте представим, что это экран профиля пользователя</string>
+    <string name="action_edit_profile">Редактировать профиль</string>
+    <string name="logout">Выйти</string>
+    <string name="edit_profile_screen">Редактировать</string>
+    <string name="created_at">Создано</string>
 </resources>

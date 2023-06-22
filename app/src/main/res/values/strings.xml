@@ -22,4 +22,9 @@
     <string name="dashboard_screen">Dashboard</string>
     <string name="settings_screen">Settings</string>
     <string name="profile_screen">Profile</string>
+    <string name="let_s_imagine_this_is_a_user_profile_screen">Let\'s imagine this is a user profile screen</string>
+    <string name="action_edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="edit_profile_screen">Edit profile</string>
+    <string name="created_at">Created At</string>
 </resources>

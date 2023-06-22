@@ -3,7 +3,6 @@ package com.box.view.screens.main
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
@@ -15,9 +14,7 @@ import com.box.R
 import com.box.databinding.ActivityMainBinding
 import com.box.view.screens.auth.SignInFragmentDirections
 import com.box.view.screens.splash.SplashFragmentDirections
-import com.box.view.screens.tabs.TabsFragment
 import com.box.view.screens.tabs.TabsFragmentDirections
-import com.box.view.utils.HasScreenToolbar
 import com.box.view.viewmodel.main.MainViewModel
 import com.box.view.viewmodel.main.MainViewState
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,18 +22,21 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
     private val viewModel by viewModels<MainViewModel>()
-
-    private val rootNavController
-        get() = ((supportFragmentManager.findFragmentById(R.id.fragmentContainer)) as NavHostFragment).navController
+    private val isTheMainCurrentDestinationInTabs: Boolean get() = tabsTopLevelFragment.any {it == currentNavController?.currentDestination?.id }
+    private val rootNavController get() = ((supportFragmentManager.findFragmentById(R.id.fragmentContainer)) as NavHostFragment).navController
     private var currentNavController: NavController? = null
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-            if(currentNavController != null && currentNavController?.popBackStack() == true) return
-            isEnabled = false
-            onBackPressedDispatcher.onBackPressed()
+            when (isTheMainCurrentDestinationInTabs) {
+                true -> finish()
+                false -> {
+                    if(currentNavController != null && currentNavController?.popBackStack() == true) return
+                    isEnabled = false
+                    onBackPressedDispatcher.onBackPressed()
+                }
+            }
         }
     }
 
@@ -103,4 +103,8 @@ class MainActivity : AppCompatActivity() {
     private fun getMainNavigationGraphId(): Int = R.navigation.main_graph
 
     private fun getSplashDestination(): Int = R.id.splashFragment
+
+    companion object {
+        val tabsTopLevelFragment = setOf(R.id.dashboardFragment, R.id.settingsFragment, R.id.profileFragment)
+    }
 }

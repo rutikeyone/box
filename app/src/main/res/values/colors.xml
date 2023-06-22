@@ -3,5 +3,6 @@
     <color name="light_blue_v1">#6789ab</color>
     <color name="blue_v1">#0000ff</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
     <color name="indeterminateTint.V1">@color/white</color>
 </resources>
