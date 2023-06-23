@@ -30,4 +30,6 @@
     <string name="right_now_you_can_edit_only_username">Right now you can edit only username</string>
     <string name="action_save">Save</string>
     <string name="action_cancel">Cancel</string>
+    <string name="enable_checkbox">Enable %1$s box</string>
+    <string name="settings_description">Enable or disable any box you want</string>
 </resources>

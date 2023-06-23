@@ -31,4 +31,6 @@
     <string name="right_now_you_can_edit_only_username">Сейчас вы можете редактировать только имя пользователя</string>
     <string name="action_save">Сохранить</string>
     <string name="action_cancel">Отменить</string>
+    <string name="enable_checkbox">Enable %1$s box</string>
+    <string name="settings_description">Включите или отключите любой флажок, который вы хотите</string>
 </resources>

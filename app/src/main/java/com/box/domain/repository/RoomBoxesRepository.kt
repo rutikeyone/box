@@ -25,8 +25,15 @@ class RoomBoxesRepository @Inject constructor(
     override suspend fun getBoxesAndSettings(onlyActive: Boolean): Flow<List<BoxAndSettingsEntity>> {
         return accountsRepository.getAccount()
             .flatMapLatest { account ->
-                if(account == null) return@flatMapLatest flowOf(emptyList())
+                if (account == null) return@flatMapLatest flowOf(emptyList())
                 queryBoxesAndSettings(account.id)
+            }
+            .mapLatest { boxAndSettings ->
+                if (onlyActive) {
+                    boxAndSettings.filter { it.isActive }
+                } else {
+                    boxAndSettings
+                }
             }
     }
 
@@ -40,7 +47,7 @@ class RoomBoxesRepository @Inject constructor(
 
     private fun queryBoxesAndSettings(accountId: Long): Flow<List<BoxAndSettingsEntity>> {
         return appDatabase.getBoxesDao().getBoxesAndSettings(accountId)
-            .map {entities ->
+            .map { entities ->
                 entities.map {
                     val boxEntity = it.boxDbEntity
                     val settingEntity = it.settingDbEntity
