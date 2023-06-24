@@ -37,7 +37,7 @@ class SettingsAdapter(
     override fun onBindViewHolder(holder: Holder, position: Int) {
         val setting = settings[position]
         val context = holder.itemView.context
-        holder.checkbox.tag = setting
+        holder.checkbox.tag = setting.box
 
         if(holder.checkbox.isChecked != setting.isActive) {
             holder.checkbox.isChecked = setting.isActive

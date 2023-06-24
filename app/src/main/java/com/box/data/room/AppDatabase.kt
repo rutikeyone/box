@@ -21,6 +21,7 @@ abstract class AppDatabase: RoomDatabase() {
 
     companion object {
         private const val databaseName: String = "app_database.db"
+        private const val initialDatabaseName: String = "initial_database.db"
 
         @Volatile
         private var instance: AppDatabase? = null
@@ -29,8 +30,7 @@ abstract class AppDatabase: RoomDatabase() {
             if(instance != null) return instance!!
             synchronized(this) {
                 instance = Room.databaseBuilder(context, AppDatabase::class.java, databaseName)
-                    .fallbackToDestructiveMigration()
-                    .allowMainThreadQueries()
+                    .createFromAsset(initialDatabaseName)
                     .build()
                 return instance!!
             }

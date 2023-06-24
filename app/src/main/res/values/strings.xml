@@ -32,4 +32,6 @@
     <string name="action_cancel">Cancel</string>
     <string name="enable_checkbox">Enable %1$s box</string>
     <string name="settings_description">Enable or disable any box you want</string>
+    <string name="box_title">%1$s box</string>
+    <string name="no_boxes">There aren\'t boxes you are looking for</string>
 </resources>

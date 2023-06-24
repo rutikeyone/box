@@ -38,4 +38,9 @@
 
     <style name="Box.OutlinedButton.V1" parent="Widget.Material3.Button.OutlinedButton" />
 
+    <style name="DefaultDashboardTileStyle">
+        <item name="android:layout_width">@dimen/dp_140</item>
+        <item name="android:layout_height">@dimen/dp_90</item>
+    </style>
+
 </resources>
