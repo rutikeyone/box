@@ -13,4 +13,5 @@
     <dimen name="dp_90">90dp</dimen>
 
     <dimen name="dashboard_item_stroke_width">3dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
 </resources>
