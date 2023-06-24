@@ -11,7 +11,7 @@
     <string name="repeat_password">Повторите пароль</string>
     <string name="empty_text_field">Пустое текстовое поле</string>
     <string name="incorrect_email">Некорректная почта</string>
-    <string name="the_password_must_contain_more_than_eight_characters">Пароль должен содержать больше восьми символов</string>
+    <string name="the_password_must_contain_more_than_second_characters">Пароль должен содержать больше двух символов</string>
     <string name="invalid_user_name">Некорректное имя пользователя</string>
     <string name="passwords_must_match">Пароли должны совпадать</string>
     <string name="invalid_email_or_password_message">Неверный адрес электронной почты или пароль.</string>
@@ -35,4 +35,9 @@
     <string name="settings_description">Включите или отключите любой флажок, который вы хотите</string>
     <string name="box_title">%1$s box</string>
     <string name="no_boxes">Здесь нет ящиков, которые вы ищете</string>
+    <string name="box_screen">Контейнер</string>
+    <string name="go_back">Назад</string>
+    <string name="this_is_box">Это %1$s контейнер!</string>
+    <string name="admin_panel">Админ панель</string>
+    <string name="admin_screen">Админ панель</string>
 </resources>

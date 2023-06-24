@@ -29,7 +29,12 @@ class TabsFragment : BaseFragment(R.layout.tabs_fragment) {
     }
 
     private fun observeState() {
+        viewModel.showAdminTab.observe(viewLifecycleOwner, ::changeVisibilityAdminTab)
         viewModel.userEmail.observe(viewLifecycleOwner, ::changeUserEmailToolbar)
+    }
+
+    private fun changeVisibilityAdminTab(value: Boolean) {
+        binding.bottomNavigationView.menu.findItem(R.id.admin).isVisible = value
     }
 
     private fun changeUserEmailToolbar(email: String?) {

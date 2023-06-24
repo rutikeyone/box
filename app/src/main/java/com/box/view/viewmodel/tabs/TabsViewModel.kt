@@ -16,12 +16,16 @@ class TabsViewModel @Inject constructor(
     private val _userEmail = MutableLiveData<String?>(null)
     val userEmail = _userEmail.share()
 
+    private val _showAdminTab = MutableLiveData<Boolean>()
+    val showAdminTab = _showAdminTab.share()
+
     init {
         getAccount()
     }
 
     private fun getAccount() = viewModelScope.launch {
         accountsRepository.getAccount().collect {
+            _showAdminTab.value = it?.isAdmin() == true 
             if(it != null) {
                 _userEmail.value = it.email
             } else {

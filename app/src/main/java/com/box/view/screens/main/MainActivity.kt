@@ -105,6 +105,6 @@ class MainActivity : AppCompatActivity() {
     private fun getSplashDestination(): Int = R.id.splashFragment
 
     companion object {
-        val tabsTopLevelFragment = setOf(R.id.dashboardFragment, R.id.settingsFragment, R.id.profileFragment)
+        val tabsTopLevelFragment = setOf(R.id.dashboardFragment, R.id.settingsFragment, R.id.profileFragment, R.id.adminFragment)
     }
 }

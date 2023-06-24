@@ -14,7 +14,7 @@ data class PasswordField(
     companion object {
         fun validate(value: String?): PasswordValidationStatus {
             if(value.isNullOrEmpty()) return PasswordValidationStatus.EMPTY
-            else if(value.length < 8) return PasswordValidationStatus.INVALID
+            else if(value.length < 3) return PasswordValidationStatus.INVALID
             return PasswordValidationStatus.VALID
         }
     }

@@ -17,7 +17,7 @@
     </style>
 
     <style name="Box.TextAppearance.Toolbar.Body1" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/black</item>
     </style>
 

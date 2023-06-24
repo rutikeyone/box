@@ -1,7 +1,6 @@
 package com.box.view.utils
 
 import android.content.Context
-import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import com.box.R
@@ -23,7 +22,7 @@ fun BaseFragment.validateEmail(value: EmailField): String? = when(value.status) 
 
 fun BaseFragment.validatePassword(value: PasswordField): String? = when(value.status) {
     PasswordValidationStatus.EMPTY -> getString(R.string.empty_text_field)
-    PasswordValidationStatus.INVALID -> getString(R.string.the_password_must_contain_more_than_eight_characters)
+    PasswordValidationStatus.INVALID -> getString(R.string.the_password_must_contain_more_than_second_characters)
     else -> null
 }
 

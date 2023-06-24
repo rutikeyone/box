@@ -10,7 +10,7 @@
     <string name="repeat_password">Repeat password</string>
     <string name="empty_text_field">Empty text field</string>
     <string name="incorrect_email">Incorrect email</string>
-    <string name="the_password_must_contain_more_than_eight_characters">The password must contain more than eight characters.</string>
+    <string name="the_password_must_contain_more_than_second_characters">The password must contain more than second characters.</string>
     <string name="invalid_user_name">Invalid user name</string>
     <string name="passwords_must_match">Passwords must match</string>
     <string name="invalid_email_or_password_message">Invalid email or password.</string>
@@ -34,4 +34,9 @@
     <string name="settings_description">Enable or disable any box you want</string>
     <string name="box_title">%1$s box</string>
     <string name="no_boxes">There aren\'t boxes you are looking for</string>
+    <string name="box_screen">Box</string>
+    <string name="go_back">Go back</string>
+    <string name="this_is_box">This is a %1$s box!</string>
+    <string name="admin_panel">Admin Panel</string>
+    <string name="admin_screen">Admin Panel</string>
 </resources>

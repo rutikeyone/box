@@ -6,6 +6,9 @@ import androidx.lifecycle.viewModelScope
 import com.box.data.repository.BoxesRepository
 import com.box.domain.entity.BoxEntity
 import com.box.view.screens.base.BaseViewModel
+import com.box.view.screens.dashboard.DashboardFragmentDirections
+import com.box.view.utils.NavigationIntent
+import com.box.view.utils.publishEvent
 import com.box.view.utils.share
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -30,5 +33,6 @@ class DashboardViewModel @Inject constructor(
 
     override fun onClick(view: View) {
         val box = view.tag as BoxEntity
+        navigationEvent.publishEvent(NavigationIntent.To(DashboardFragmentDirections.actionDashboardFragmentToBoxFragment(box)))
     }
 }
