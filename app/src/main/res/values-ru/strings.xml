@@ -40,4 +40,13 @@
     <string name="this_is_box">Это %1$s контейнер!</string>
     <string name="admin_panel">Админ панель</string>
     <string name="admin_screen">Админ панель</string>
+    <string name="account_id">Account ID</string>
+    <string name="box_name">Color name</string>
+    <string name="account_email">Account email</string>
+    <string name="username">Username</string>
+    <string name="box_id">Box ID</string>
+    <string name="color_value">Color Value</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="all_accounts">All Accounts</string>
 </resources>

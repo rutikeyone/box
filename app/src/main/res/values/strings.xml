@@ -39,4 +39,14 @@
     <string name="this_is_box">This is a %1$s box!</string>
     <string name="admin_panel">Admin Panel</string>
     <string name="admin_screen">Admin Panel</string>
+    <string name="account_id">Account ID</string>
+    <string name="box_name">Color name</string>
+    <string name="account_email">Account email</string>
+    <string name="username">Username</string>
+    <string name="box_id">Box ID</string>
+    <string name="color_value">Color Value</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="settings_is_active">Is Active</string>
+    <string name="all_accounts">All Accounts</string>
 </resources>
