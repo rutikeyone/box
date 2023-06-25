@@ -20,6 +20,7 @@
         tools:src="@drawable/ic_plus"
         app:tint="@color/black"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/attributesTextView"/>
 
     <TextView

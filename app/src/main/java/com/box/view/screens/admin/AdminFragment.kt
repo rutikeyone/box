@@ -3,6 +3,7 @@ package com.box.view.screens.admin
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.box.R
 import com.box.databinding.FragmentAdminBinding
 import com.box.databinding.FragmentDashboardBinding
@@ -25,6 +26,16 @@ class AdminFragment : BaseFragment(R.layout.fragment_admin) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val layoutManager = LinearLayoutManager(requireContext())
+        adapter = AdminTileAdapter(viewModel)
+        binding.adminTreeRecyclerView.layoutManager = layoutManager
+        binding.adminTreeRecyclerView.adapter = adapter
+        observeTreeItems()
     }
 
+    private fun observeTreeItems() {
+        viewModel.items.observe(viewLifecycleOwner) { treeItems ->
+            adapter.renderItems(treeItems)
+        }
+    }
 }
