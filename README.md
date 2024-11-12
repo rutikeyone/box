@@ -4,6 +4,12 @@
 ## Description 
 
 ## Technologies used
+* `Kotlin`;
+* `Android Views`;
+* `Material`;
+* `Hilt`;
+* `Room`;
+* `Clean-Archecture`.
 
 ## Features
 * `Authorization by email and password`;
