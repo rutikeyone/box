@@ -6,6 +6,13 @@
 ## Technologies used
 
 ## Features
+* `Authorization by email and password`;
+* `Registration with email, name and password`;
+* `Get boxes list`;
+* `Get box details`;
+* `Get account settings`;
+* `Get account data`;
+* `Change account name`.
 
 ## Screenshots
 
