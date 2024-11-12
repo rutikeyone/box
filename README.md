@@ -2,6 +2,7 @@
 ## Box
 
 ## Description 
+A mobile application that provides access to a list of boxes and settings based on authorization data. 
 
 ## Technologies used
 * `Kotlin`;
