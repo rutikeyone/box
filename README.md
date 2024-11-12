@@ -21,6 +21,10 @@
 
 ## Video with an example of the work
 
+<a href="https://youtube.com/shorts/YWfOFnBKGIc">
+  <img src="https://github.com/rutikeyone/box/blob/master/app/metadata/screenshots/1.png" width="225"/>
+</a>
+
 ## Building the Code
 
 * `Clone the repository using HTTP: git clone https://github.com/rutikeyone/box`;
