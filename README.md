@@ -10,7 +10,7 @@ A mobile application that provides access to a list of boxes and settings based 
 * `Material`;
 * `Hilt`;
 * `Room`;
-* `Clean architectures`.
+* `Clean architecture`.
 
 ## Features
 * `Authorization by email and password`;
