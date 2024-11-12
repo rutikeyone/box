@@ -6,11 +6,11 @@ A mobile application that provides access to a list of boxes and settings based 
 
 ## Technologies used
 * `Kotlin`;
-* `Android Views`;
+* `Android view`;
 * `Material`;
 * `Hilt`;
 * `Room`;
-* `Clean-Archecture`.
+* `Clean archecture`.
 
 ## Features
 * `Authorization by email and password`;
