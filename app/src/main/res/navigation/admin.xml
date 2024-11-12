@@ -10,4 +10,5 @@
         android:name="com.box.view.screens.admin.AdminFragment"
         android:label="@string/admin_screen"
         tools:layout="@layout/fragment_admin" />
+
 </navigation>

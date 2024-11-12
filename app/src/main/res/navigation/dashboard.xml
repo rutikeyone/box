@@ -10,6 +10,7 @@
         android:name="com.box.view.screens.dashboard.DashboardFragment"
         android:label="@string/dashboard_screen"
         tools:layout="@layout/fragment_dashboard" >
+
         <action
             android:id="@+id/action_dashboardFragment_to_boxFragment"
             app:destination="@id/boxFragment"
@@ -17,15 +18,19 @@
             app:exitAnim="@anim/exit"
             app:popEnterAnim="@anim/pop_enter"
             app:popExitAnim="@anim/pop_exit" />
+
     </fragment>
+
     <fragment
         android:id="@+id/boxFragment"
         android:name="com.box.view.screens.dashboard.BoxFragment"
         android:label="@string/box_screen"
         tools:layout="@layout/fragment_box" >
+
         <argument
             android:name="box"
             app:argType="com.box.domain.entity.BoxEntity" />
+
     </fragment>
 
 </navigation>

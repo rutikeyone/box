@@ -20,8 +20,8 @@ abstract class AppDatabase: RoomDatabase() {
     abstract fun getBoxesDao(): BoxesDao
 
     companion object {
-        private const val databaseName: String = "app_database.db"
-        private const val initialDatabaseName: String = "initial_database.db"
+        private const val DATABASE_NAME: String = "app_database.db"
+        private const val INITIAL_DATABASE_NAME: String = "initial_database.db"
 
         @Volatile
         private var instance: AppDatabase? = null
@@ -29,8 +29,8 @@ abstract class AppDatabase: RoomDatabase() {
         fun getDatabaseClient(context: Context): AppDatabase {
             if(instance != null) return instance!!
             synchronized(this) {
-                instance = Room.databaseBuilder(context, AppDatabase::class.java, databaseName)
-                    .createFromAsset(initialDatabaseName)
+                instance = Room.databaseBuilder(context, AppDatabase::class.java, DATABASE_NAME)
+                    .createFromAsset(INITIAL_DATABASE_NAME)
                     .build()
                 return instance!!
             }

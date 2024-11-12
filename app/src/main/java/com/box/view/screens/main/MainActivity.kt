@@ -1,10 +1,9 @@
 package com.box.view.screens.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
@@ -48,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupNavigation()
@@ -69,6 +68,8 @@ class MainActivity : AppCompatActivity() {
         rootNavController.graph = graph
         currentNavController = rootNavController
     }
+
+
 
     private fun navigateByNotAuthenticatedState() {
         when(rootNavController.currentDestination?.id) {

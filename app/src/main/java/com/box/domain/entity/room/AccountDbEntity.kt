@@ -34,6 +34,7 @@ data class AccountDbEntity(
         fun fromSignUpData(signUpDataEntity: SignUpDataEntity, secureUtilsRepository: SecureUtilsRepository): AccountDbEntity {
             val salt = secureUtilsRepository.generateSalt()
             val hash = secureUtilsRepository.passwordToHash(signUpDataEntity.password, salt)
+
             return AccountDbEntity(
                 id = 0,
                 email = signUpDataEntity.email,

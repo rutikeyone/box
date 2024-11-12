@@ -10,4 +10,5 @@
         android:name="com.box.view.screens.settings.SettingsFragment"
         android:label="@string/settings_screen"
         tools:layout="@layout/fragment_settings" />
+
 </navigation>
