@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/IgorVolochay/Face-recognition?style=flat-square&color=blue) &nbsp;
 ## Box
 
-## Description 
+## Description
 A mobile application that provides access to a list of boxes and settings based on authorization data. 
 
 ## Technologies used
